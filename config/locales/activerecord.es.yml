@@ -1,0 +1,43 @@
+es:
+  activerecord:
+    errors:
+      messages:
+        not_save_error_found: Fallo el guardado porque se encontraron %{errors}
+        record_invalid: "La validación falló: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "No se puede eliminar el registro porque existe un %{record} dependiente"
+          has_many: "No se puede eliminar el registro porque existen %{record} dependientes"
+    exceptions:
+      not_found: Registro no encontrado
+    models:
+      sale:
+        one: Venta
+        other: Ventas
+      client:
+        one: Cliente
+        other: Clientes
+      provider:
+        one: Vendedor
+        other: Vendedores
+      product:
+        one: Producto
+        other: Productos
+      
+    attributes:
+      sale:
+        product_id: Producto
+        client_id: Cliente
+        quantity: Cantidad
+        price: Precio
+
+      client:
+        name: Nombre
+      
+      provide:
+        name: Nombre
+        address: Dirección
+
+      product: &bank_account
+        provider: Vendedor
+        description: Descripción
+        price: Precio

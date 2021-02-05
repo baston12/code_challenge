@@ -1,0 +1,39 @@
+es:
+  button:
+    upload: Cargar
+    back: Atras
+  label:
+    success: Éxito
+    warning: Advertencia
+    error: Error
+    actived: Activado
+    time_rent: Tiempo de renta
+    help_center: Centro de ayuda
+
+  sales:
+    index:
+      title: Ventas
+      subtitle: ''
+      description: Lista de las ventas realizadas
+      import_link: Importar ventas
+      sales:
+        table:
+          client: Comprador
+          product: Producto
+          price: Precio
+          quantity: Cantidad
+          provider_address: Dirección de vendedor
+          provider: Vendedor
+      not_records: Sin ventas
+      total_income: Total de ingreso
+      exist_errors: Se tienen errores en el archivo pero se cargaron algúnos de los datos. Revisa los faltantes.
+    file_import_form:
+    new:
+      title: Importación de Ventas
+      description: "Podrás subir un archivo para cargar las ventas, 
+                    este deberá estar delimitado por tabs y tener las siguientes columnas:<br /> 
+                    <ol><li>comprador</li> <li>descripción del ítem</li><li>precio del ítem </li><li>total de ítems</li><li> dirección de vendedor</li><li> vendedor</li></ol>
+                    <br / >
+                    Para los datos de precio y total de items deben ser mayores a 0.
+                    "
+      subtitle: Cargar archivo      

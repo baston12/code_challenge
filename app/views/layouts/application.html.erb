@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Challenge</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+    <%= render 'layouts/flash_messages', classalert: 'alert-success', label: t('label.success'), message: flash[:notice]%>
+    <% elsif flash[:alert] %>
+    <%= render 'layouts/flash_messages', classalert: 'alert-warning', label: t('label.warning'),message: flash[:alert]%>
+    <% elsif flash[:error] %>
+    <%= render 'layouts/flash_messages', classalert: 'alert-danger', label: t('label.error'),message: flash[:error]%>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

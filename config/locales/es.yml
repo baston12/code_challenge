@@ -1,0 +1,6 @@
+es:
+  controller:
+    messages:
+      created: "%{model} fue creado satisfactoriamente."
+      updated: "%{model} fue actualizado satisfactoriamente."
+      destroy: "%{model} fue eliminado satisfactoriamente."

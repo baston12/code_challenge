@@ -1,0 +1,19 @@
+<!--Este codigo es para los mensajes -->
+<%  if flash[:notice]
+      classalert = 'alert-success'; label = t('label.success'); message = flash[:notice];
+    elsif flash[:alert]
+      classalert = 'alert-warning'; label = t('label.warning'); message = flash[:alert];
+    elsif flash[:error]
+      classalert = 'alert-danger'; label = t('label.error'); message = flash[:error];
+    end 
+%>
+<div class="alert <%=classalert %> alert-dismissible fade show container mt-5" role="alert">
+  <h5 class="alert-heading">
+    <i class="cil-check-alt text-success"></i> <%= label %>
+  </h5>
+  <p class="Information" style="margin-left: 1.5rem;"><%= message %></p>
+  <button class="close" type="button" data-dismiss="alert" aria-label="Cerca">
+    <span aria-hidden="true">×</span>
+  </button>
+</div>
+

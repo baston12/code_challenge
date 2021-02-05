@@ -1,0 +1,7 @@
+<h1><%= t('.title') %></h1>
+<p><%= t('.description').html_safe %></p>
+<h1><%= t('.subtitle') %></h1>
+
+<%= render 'file_import_form', sale: @sale %>
+
+<%= link_to t('button.back'), sales_path %>

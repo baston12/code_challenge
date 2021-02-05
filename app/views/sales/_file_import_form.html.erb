@@ -1,0 +1,10 @@
+<%= form_with(model: @sale, url: create_from_file_sales_path, local: true) do |form| %>
+  
+  <div class="field">
+    <%= form.file_field :file_with_sales, class: 'form-control-file', required: true, accept: 'application/tab' %>
+  </div>
+  <br>  
+  <div class="actions">
+    <%= form.submit t('button.upload') %>
+  </div>
+<% end %><br>

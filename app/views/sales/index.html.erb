@@ -1,0 +1,52 @@
+<h1><%= t('.title') %></h1>
+<p><%= t('.description').html_safe %></p>
+
+<h1><%= t('.subtitle') %></h1>
+<br>
+<div>
+<%= link_to t('.import_link'), new_sale_path %>
+</div>
+<div id="total-balance">
+    <strong><%= t('.total_income') %></strong> <%= number_to_currency(total_income(@sales), precision: 2) %>
+</div>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th><%= t('.sales.table.client') %></th>
+      <th><%= t('.sales.table.product') %></th>
+      <th><%= t('.sales.table.price') %></th>
+      <th><%= t('.sales.table.quantity') %></th>
+      <th><%= t('.sales.table.provider_address') %></th>
+      <th><%= t('.sales.table.provider') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @sales.size == 0 %>
+        <tr>
+            <td colspan="6">
+                <%= t('.not_records') %>
+            </td>
+        </tr>
+    <% else %>
+        <% @sales.each do |sale| %>
+        <tr>
+            <td><%= sale.client.name %></td>
+            <td><%= sale.product.description %></td>
+            <td><%= number_to_currency(sale.product.price) %></td>
+            <td><%= sale.quantity %></td>
+            <td><%= sale.product.provider.address %></td>
+            <td><%= sale.product.provider.name %></td>
+        </tr>
+        <% end %>
+    <% end%>
+  </tbody>
+</table>
+<br>
+
+
+
+<br>
+
+
