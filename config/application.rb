@@ -19,6 +19,7 @@ module CodeChallenge
     config.autoload_paths += %W(#{Rails.root}/services)
 
     config.eager_load_paths += Dir["#{config.root}/lib/**/"]
+    config.eager_load_paths += Dir["#{config.root}/lib/formatter/**/"]
     config.eager_load_paths += Dir["#{config.root}/services/**/"]
   end
 end
